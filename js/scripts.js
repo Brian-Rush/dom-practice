@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("ul#user").append("<li>Hello!</li>");
     $("ul#webpage").append("<li>Why hello there!</li>");
     $("li").last().addClass("green");
-    $('li').click(function() {
+    $('li').last().click(function() {
       $(this).remove();
     });
 
@@ -13,7 +13,7 @@ $(document).ready(function() {
   $("button#goodbye").click(function() {
     $("ul#user").prepend("<li>Goodbye!</li>");
     $("ul#webpage").prepend("<li>Goodbye, dear user!</li>");
-    $('li').click(function() {
+    $('li').first().click(function() {
       $(this).remove();
     });
   });
@@ -21,7 +21,7 @@ $(document).ready(function() {
   $("button#stop").click(function() {
     $("ul#user").prepend("<li>Stop copying me!</li>");
     $("ul#webpage").prepend("<li>Pardon me. I meant no offense.</li>");
-    $('li').click(function() {
+    $('li').first().click(function() {
       $(this).remove();
     });
   });
